@@ -1,0 +1,53 @@
+{
+  "arrays of strings": [
+    "one", "two", "three"
+  ],
+  "arrays of numbers": [
+    0,
+    55,
+    0.2542,
+    55.21241,
+    -123,
+    -0.25,
+    -25.2
+  ],
+  "emojis": "\uD83D\uDC40",
+  "arrays of tokens": [
+    true, false, null
+  ],
+  "arrays of objects": [
+    { "kevin": "bacon" },
+    { "kevin": "heart" }
+  ],
+  "nested things": [
+    {
+      "arrays of strings": [
+        "one",
+        "two",
+        "three"
+      ],
+      "arrays of numbers": [
+        0,
+        55,
+        0.2542,
+        55.21241,
+        -123,
+        -0.25,
+        -25.2
+      ],
+      "arrays of booleans": [
+        true,
+        false,
+        null
+      ],
+      "arrays of objects": [
+        {
+          "kevin": "bacon"
+        },
+        {
+          "kevin": "heart"
+        }
+      ]
+    }
+  ]
+}
