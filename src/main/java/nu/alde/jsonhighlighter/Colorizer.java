@@ -23,6 +23,10 @@ public class Colorizer {
   }
 
   public static String colorize(String input) {
+    return colorize(input, 2);
+  }
+
+  public static String colorize(String input, int indentation) {
     List<Token<?>> tokens = tokens(input);
     StringBuilder result = new StringBuilder();
     AtomicInteger indent = new AtomicInteger();
@@ -30,10 +34,10 @@ public class Colorizer {
       switch (t.type()) {
         case OBJECT_START, ARRAY_START -> result.append(t.colorize())
             .append('\n')
-            .append(spacing(indent.addAndGet(2)));
+            .append(spacing(indent.addAndGet(indentation)));
         case OBJECT_END, ARRAY_END -> result
             .append('\n')
-            .append(spacing(indent.addAndGet(-2)))
+            .append(spacing(indent.addAndGet(-indentation)))
             .append(t.colorize());
         case COMMA -> result
             .append(t.colorize())
