@@ -6,7 +6,6 @@ import static nu.alde.jsonhighlighter.parsers.AbstractParser.ERR_UNEXPECTED_UNRE
 
 import java.io.IOException;
 import java.io.PushbackReader;
-import java.io.Reader;
 import java.util.ArrayList;
 import nu.alde.jsonhighlighter.parsers.BooleanParser;
 import nu.alde.jsonhighlighter.parsers.NullParser;
@@ -17,13 +16,7 @@ import nu.alde.jsonhighlighter.tokens.NumberToken;
 import nu.alde.jsonhighlighter.tokens.StringToken;
 import nu.alde.jsonhighlighter.tokens.Token;
 
-public class Tokenizer {
-
-  private PushbackReader reader;
-
-  public Tokenizer(PushbackReader reader) {
-    this.reader = reader;
-  }
+public record Tokenizer(PushbackReader reader) {
 
   public ArrayList<Token<?>> tokenize() {
     ArrayList<Token<?>> result = new ArrayList<>();
